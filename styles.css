@@ -86,7 +86,7 @@ section {
 
 #Accueil {
     padding-top: 0;
-    margin-bottom: 200px;
+    margin-bottom: 150px;
 }
 
 #Projets, #BottomBody {
@@ -582,6 +582,7 @@ footer {
         margin: 10px 20px;
         margin-bottom: 100px;
         height: 80px;
+        position: relative;
     }
 
     .rectangleTop {
@@ -598,6 +599,11 @@ footer {
     .myLogo {
         width: 60px;
         height: 60px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
     }
 
     .burger-menu {
