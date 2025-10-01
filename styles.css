@@ -17,7 +17,8 @@ header {
     background-color: #333333;
     color: rgb(255, 255, 255);
     text-align: center;
-    margin: 0px 200px;
+    margin: 0px 40px;
+    margin-bottom: 200px;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -27,7 +28,6 @@ header {
     padding: 0 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    margin-bottom: 200px;
 }
 
 header p {
@@ -449,14 +449,138 @@ footer {
 
 
 
-/* Responsive Design */
+/* Responsive Design - Tablettes */
+@media (max-width: 1024px) and (min-width: 768px) {
+    header {
+        height: 100px;
+        margin: 0px 30px;
+        margin-bottom: 150px;
+        gap: 1.5rem;
+        padding: 0 1.5rem;
+    }
+
+    .rectangleTop p {
+        font-size: 20px;
+    }
+
+    .links ul li a {
+        font-size: 18px;
+        padding: 12px 30px;
+    }
+
+    .myLogo {
+        height: 70px;
+        width: 70px;
+    }
+
+    .topBody {
+        flex-direction: row;
+        gap: 50px;
+        padding: 0 30px;
+    }
+
+    .topBody img {
+        width: 200px;
+        height: 200px;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        border-radius: 50%;
+        border: 5px solid rgb(120,120,120);
+        flex-shrink: 0;
+    }
+
+    .textTopBody h2 {
+        font-size: 32px;
+    }
+
+    .textTopBody p {
+        font-size: 18px;
+    }
+
+    .projets {
+        margin: 80px 30px;
+        padding: 50px 30px;
+    }
+
+    .projets h2 {
+        font-size: 36px;
+    }
+
+    .projectsContainer {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 300px);
+        gap: 30px;
+    }
+
+    .grid-container {
+        width: 600px;
+        height: 500px;
+    }
+
+    .project-card {
+        width: 260px;
+        height: 230px;
+    }
+
+    .skills {
+        margin: 80px 30px;
+        padding: 50px 30px;
+    }
+
+    .skills h2 {
+        font-size: 36px;
+    }
+
+    .skillsContainer {
+        gap: 40px;
+    }
+
+    .logoSkills {
+        width: 70px;
+        height: 70px;
+    }
+
+    .contact {
+        margin: 80px 30px;
+        padding: 50px 30px;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    .contact h2 {
+        font-size: 36px;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    .contactContainer {
+        gap: 40px;
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    .contactContainer img {
+        width: 60px;
+        height: 60px;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+}
+
+/* Responsive Design - Mobile */
 @media (max-width: 768px) {
     header {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
         padding: 0 20px;
-        margin: 10px;
+        margin: 10px 20px;
+        margin-bottom: 100px;
         height: 80px;
     }
 
