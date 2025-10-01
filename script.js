@@ -26,25 +26,15 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Card flip functionality
+    // Card flip functionality - Solution universelle
     const projectCards = document.querySelectorAll('.project-card');
     
-    // Fonction pour détecter si c'est un appareil tactile
-    function isTouchDevice() {
-        return (('ontouchstart' in window) ||
-                (navigator.maxTouchPoints > 0) ||
-                (navigator.msMaxTouchPoints > 0));
-    }
-    
     projectCards.forEach(card => {
-        if (isTouchDevice()) {
-            // Pour les appareils tactiles - clic pour retourner
-            card.addEventListener('click', function(e) {
-                e.preventDefault();
-                this.classList.toggle('flipped');
-            });
-        }
-        // Pour desktop, le CSS hover s'occupe de tout
+        // Solution simple : ajout du click pour tous les appareils
+        // Fonctionne sur mobile ET desktop
+        card.addEventListener('click', function() {
+            this.classList.toggle('flipped');
+        });
     });
 
     // === ANIMATIONS DE SCROLL ===

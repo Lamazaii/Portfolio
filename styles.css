@@ -86,7 +86,7 @@ section {
 
 #Accueil {
     padding-top: 0;
-    margin-bottom: 250px;
+    margin-bottom: 200px;
 }
 
 #Projets, #BottomBody {
@@ -121,6 +121,8 @@ section {
     color: white;
     font-size: 40px;
     margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+
 }
 
 .textTopBody p {
@@ -155,6 +157,8 @@ section {
     text-align: center;
     font-size: 40px;
     color :white;
+    font-family: 'Playfair Display', serif;
+
 }
 
 .projets p {
@@ -233,13 +237,13 @@ section {
 }
 
 .card-front {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #2f2f2f 0%, #5a5a5a 100%);
     color: white;
     transform: rotateY(0deg);
 }
 
 .card-back {
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    background: linear-gradient(135deg, #6e6e6e 0%, #a9a9a9 100%);
     color: white;
     transform: rotateY(180deg);
 }
@@ -313,6 +317,7 @@ section {
     font-size: 40px;
     color: white;
     margin-bottom: 100px;
+    font-family: 'Playfair Display', serif;
 }
 
 
@@ -352,6 +357,8 @@ section {
     font-size: 40px;
     color: white;
     margin-bottom: 100px;
+    font-family: 'Playfair Display', serif;
+
 }
 
 .skillsLogos {
@@ -556,7 +563,13 @@ footer {
         transition: transform 0.6s ease-in-out;
     }
 
+    /* Désactiver hover sur mobile - utiliser seulement la classe flipped */
     .project-card:hover .card-inner {
+        transform: none;
+    }
+    
+    /* S'assurer que flipped fonctionne sur mobile */
+    .project-card.flipped .card-inner {
         transform: rotateY(180deg);
     }
 
