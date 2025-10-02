@@ -539,6 +539,11 @@ footer {
     .logoSkills {
         width: 70px;
         height: 70px;
+        transition: transform 0.3s ease;
+    }
+
+    .logoSkills:hover {
+        transform: scale(1.2);
     }
 
     .contact {
@@ -765,6 +770,11 @@ footer {
     .logoSkills {
         width: 60px;
         height: 60px;
+        transition: transform 0.3s ease;
+    }
+
+    .logoSkills:hover {
+        transform: scale(1.2);
     }
 
     .skillsLogos {
@@ -807,7 +817,7 @@ footer {
 .animate-scale {
     opacity: 0;
     transform: scale(0.5);
-    transition: all 0.5s ease-out;
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
     transition-delay: var(--delay, 0s);
 }
 
@@ -833,6 +843,14 @@ footer {
 .animate-scale.visible {
     opacity: 1;
     transform: scale(1);
+}
+
+.logoSkills.animate-scale.visible {
+    transition: transform 0.3s ease;
+}
+
+.logoSkills.animate-scale.visible:hover {
+    transform: scale(1.2);
 }
 
 .animate-bounce.visible {
