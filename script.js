@@ -40,8 +40,62 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+
     // Appeler le reset au début
     resetAllElements();
+
+    const themeToggle = document.getElementById('themeToggle');
+    const logo = document.getElementById("logoChange"); // le logo est le bouton
+    const bottomBody = {
+        skillLogos: {
+            LogoJava: document.getElementById("logoJava"),
+            LogoHTML: document.getElementById("logoHTML"),
+            LogoCSS: document.getElementById("logoCSS"),
+            LogoJS: document.getElementById("logoJS"),
+            LogoPython: document.getElementById("logoPython"),
+            LogoSQL: document.getElementById("logoSQL"),
+            LogoC: document.getElementById("logoC"),
+            LogoCpp: document.getElementById("logoCpp"),
+            LogoMail: document.getElementById("LogoMail"),
+            LogoLinkedIn: document.getElementById("LogoLinkedIn"),
+        }
+    };
+
+
+    const body = document.body;
+
+
+    themeToggle.addEventListener('click', () => {
+        body.classList.toggle('light-mode');
+
+        // On change l'image en fonction du thème
+        if (body.classList.contains("light-mode")) {
+            logo.src = "img/Logo_noir.png";          // image pour thème clair
+            bottomBody.skillLogos.LogoJava.src = "img/LogoJavaCouleur.jpg";
+            bottomBody.skillLogos.LogoHTML.src = "img/LogoHTMLCouleur.webp";
+            bottomBody.skillLogos.LogoCSS.src = "img/LogoCSSCouleur.png";
+            bottomBody.skillLogos.LogoJS.src = "img/LogoJSCouleur.webp";
+            bottomBody.skillLogos.LogoPython.src = "img/LogoPythonCouleur.webp";
+            bottomBody.skillLogos.LogoSQL.src = "img/LogoSQLCouleur.jpg";
+            bottomBody.skillLogos.LogoC.src = "img/LogoCCouleur.png";
+            bottomBody.skillLogos.LogoCpp.src = "img/LogoC++Couleur.jpg";
+            bottomBody.skillLogos.LogoMail.src = "img/LogoMailCouleur.png";
+            bottomBody.skillLogos.LogoLinkedIn.src = "img/LogoLinkedInCouleur.png";
+        } else {
+            logo.src = "img/Logo.png";     // image pour thème sombre
+            bottomBody.skillLogos.LogoJava.src = "img/LogoJava.png";
+            bottomBody.skillLogos.LogoHTML.src = "img/LogoHTML.png";
+            bottomBody.skillLogos.LogoCSS.src = "img/LogoCSS.png";
+            bottomBody.skillLogos.LogoJS.src = "img/LogoJS.png";
+            bottomBody.skillLogos.LogoPython.src = "img/LogoPython.png";
+            bottomBody.skillLogos.LogoSQL.src = "img/LogoSQL.png";
+            bottomBody.skillLogos.LogoC.src = "img/LogoC.png";
+            bottomBody.skillLogos.LogoCpp.src = "img/LogoC++.png";  
+            bottomBody.skillLogos.LogoMail.src = "img/LogoMail.webp";
+            bottomBody.skillLogos.LogoLinkedIn.src = "img/logoLinkedIn.png";
+        }
+    });
+
 
     const burgerMenu = document.querySelector('.burger-menu');
     const links = document.querySelector('.links');
@@ -69,11 +123,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Card flip functionality - Solution universelle
+    // Card flip functionality 
     const projectCards = document.querySelectorAll('.project-card');
     
     projectCards.forEach(card => {
-        // Solution simple : ajout du click pour tous les appareils
+        // ajout du click pour tous les appareils
         // Fonctionne sur mobile ET desktop
         card.addEventListener('click', function() {
             this.classList.toggle('flipped');
